@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blog_posts', function (Blueprint $table) {
+        Schema::create('candidatures', function (Blueprint $table) {
             $table->id();
+            $table->string('nom')->nullable();
+            $table->string('prenom')->nullable();
+            $table->string('email');
+            $table->string('telephone')->nullable();
+            $table->string('role')->nullable();
+            $table->text('message');
             $table->timestamps();
         });
     }
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('blog_posts');
+        Schema::dropIfExists('candidatures');
     }
 };

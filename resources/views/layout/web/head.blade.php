@@ -4,9 +4,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="viewport" content="width=device-width" />
 
-  <title>DunaEdu</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>DunaEdu — L’éducation centralisée, accessible à tous.</title>
+  <meta name="description" content="DunaEdu centralise le savoir et propose des formations, workshops et services éducatifs accessibles à tous.">
+  <meta name="keywords" content="DunaEdu, formation, workshops, éducation, cours, apprentissage">
+  <meta name="theme-color" content="#0072b1">
 
   <!-- Favicons -->
   <link href="{{ asset('assets/img/favicon.png')}}" rel="icon">

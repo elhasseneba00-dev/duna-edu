@@ -13,4 +13,9 @@ class Categorie extends Model
     protected $casts = [
         // Add JSON casts later if needed
     ];
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class, 'category_id');
+    }
 }

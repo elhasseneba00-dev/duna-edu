@@ -26,14 +26,13 @@
     <script src="https://cdn.datatables.net/2.3.5/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.3.5/js/dataTables.bootstrap5.js"></script>
     <script src="https://cdn.datatables.net/responsive/3.0.7/js/dataTables.responsive.js"></script>
-    <script src="https://cdn.datatables.net/responsive/3.0.7/js/responsive.bootstrap5.js"></script>
-    <script src="https://cdn.datatables.net/plug-ins/2.3.5/i18n/fr-FR.json"></script>
+    <script src="https://cdn.datatables.net/plug-ins/2.3.5/js/responsive.bootstrap5.js"></script>
     <!-- Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
         var table = new DataTable('#example', {
             language: {
-                url: 'https:///cdn.datatables.net/plug-ins/2.3.5/i18n/fr-FR.json',
+                url: 'https://cdn.datatables.net/plug-ins/2.3.5/i18n/fr-FR.json',
             },
             responsive: true
         });

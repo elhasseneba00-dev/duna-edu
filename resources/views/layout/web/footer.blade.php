@@ -1,63 +1,44 @@
 <footer id="footer" class="footer accent-background">
+    @php($societe = \App\Models\Societe::first())
+    @php($reseaux = \App\Models\ReseauSocial::all())
 
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Learner</span>
+          <a href="{{ route('home.index_fr') }}" class="logo d-flex align-items-center">
+            <span class="sitename">DunaEdu</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>{{ $societe->description_fr ?? 'L’éducation centralisée, accessible à tous.' }}</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            @foreach($reseaux as $r)
+              <a href="{{ $r->url }}" target="_blank" rel="noopener"><i class="bi bi-{{ $r->icon ?? 'link-45deg' }}"></i></a>
+            @endforeach
           </div>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Liens utiles</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="{{ route('home.index_fr') }}">Accueil</a></li>
+            <li><a href="{{ route('about.index_fr') }}">À propos</a></li>
+            <li><a href="{{ route('services.index_fr') }}">Formations</a></li>
+            <li><a href="{{ route('careers.index_fr') }}">Carrières</a></li>
+            <li><a href="{{ route('contact.index_fr') }}">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+          <h4>Nous contacter</h4>
+          <p>{{ $societe->address_fr ?? 'Adresse non renseignée' }}</p>
+          <p class="mt-4"><strong>Téléphone:</strong> <span>{{ $societe->phone ?? '' }}</span></p>
+          <p><strong>Email:</strong> <span>{{ $societe->email ?? '' }}</span></p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">DunaEdu</strong> <span>Tous droits réservés</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        {{-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> --}}
-      </div>
+      <p>© {{ date('Y') }} <strong class="px-1 sitename">DunaEdu</strong> — Tous droits réservés</p>
     </div>
 
   </footer>

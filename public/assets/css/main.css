@@ -24,9 +24,11 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #394450; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #223a58; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #136ad5; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #0072b1; /* DunaEdu Primary Blue */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --brand-primary: #0072b1; /* DunaEdu */
+  --brand-accent: #DDB60A; /* DunaEdu */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -55,11 +57,11 @@
 }
 
 .accent-background {
-  --background-color: #136ad5;
+  --background-color: #0072b1; /* brand primary */
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #acd0fc;
-  --surface-color: #4188de;
+  --accent-color: #DDB60A; /* brand accent for highlights on dark */
+  --surface-color: #1f84c2;
   --contrast-color: #ffffff;
 }
 
@@ -154,10 +156,10 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #136ad5;
+  --background-color: #0072b1; /* brand primary */
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #2e80e4;
+  --accent-color: #DDB60A; /* brand accent on header */
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;

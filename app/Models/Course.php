@@ -30,4 +30,10 @@ class Course extends Model
         return $this->belongsToMany(Tag::class, 'course_tags')
                     ->withTimestamps();
     }
+
+    // Course → Modules (One to Many)
+    public function modules()
+    {
+        return $this->hasMany(Module::class);
+    }
 }
